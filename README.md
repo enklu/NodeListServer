@@ -167,13 +167,13 @@ public class ServerListEntry
 	// IP address. Beware: Might be IPv6 format, and require you to chop off the leading "::ffff:" part. YMMV.
 	public string ip;
 	// Port of the server.
-	public int serverPort;
+	public int port;
 	// Name of the server.
-	public string serverName;
+	public string name;
 	// Number of players on the server.
-	public int serverPlayers;
+	public int players;
 	// The number of players maximum allowed on the server.
-	public int serverCapacity;
+	public int capacity;
 	// Extra data.
 	public string extras;
 }

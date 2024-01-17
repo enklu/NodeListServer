@@ -36,6 +36,7 @@ const Serverlist = require("./lib/serverList");
 // Attach the functions to each path we use with NodeLS.
 expressApp.post("/list", (req, res) => Serverlist.sendList(req, res));
 expressApp.post("/add", (req, res) => Serverlist.addServer(req, res));
+expressApp.post("/find", (req, res) => Serverlist.findServers(req, res));
 expressApp.post("/remove", (req, res) => Serverlist.removeServer(req, res));
 
 // Finally, start the application
