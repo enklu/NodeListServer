@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon init.js"
+    "start": "node init.js",
+    "dev" : "nodemon init.js"
   },
   "author": "Matt Coburn (SoftwareGuy/Coburn)",
   "license": "MIT",
