@@ -2,7 +2,6 @@
   "name": "nodelistserver",
   "version": "1.0.0",
   "description": "NodeJS (re)implementation of the Mirror List Server",
-  "main": "listServer.js",
   "dependencies": {
     "@azure/identity": "^4.0.1",
     "@azure/keyvault-secrets": "^4.7.0",

@@ -28,7 +28,7 @@ const REVISION_VER = 0;
 // Require some essential libraries and modules.
 // ---------------
 // - Import what we need from our other files
-const { configuration } = require("./lib/config"); // our configuration
+const { configuration, initConfiguration } = require("./lib/config"); // our configuration
 const { expressApp } = require("./lib/express"); // our express server
 const Serverlist = require("./lib/serverList");
 
@@ -45,6 +45,12 @@ console.log(
   "Report bugs and fork the project on GitHub: https://github.com/SoftwareGuy/NodeListServer"
 );
 
-expressApp.listen(configuration.Core.listenPort, configuration.Core.ipV4 ? "0.0.0.0" : "::", () =>
-  console.log(`NodeLS is now listening on port ${configuration.Core.listenPort}.`)
+(async () => {
+  await initConfiguration();
+  console.log(configuration.Auth.communicationKey);
+  console.log("About to listen")
+  expressApp.listen(configuration.Core.listenPort, configuration.Core.ipV4 ? "0.0.0.0" : "::", () =>
+    console.log(`NodeLS is now listening on port ${configuration.Core.listenPort}.`)
 );
+
+})();

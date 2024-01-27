@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/d705c0ce-0b39-44a2-b608-4b3433b2f251/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/MultiplayerServers",
+    "appService.deploySubpath": "."
+}
