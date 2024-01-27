@@ -163,7 +163,7 @@ public class ServerListResponse
 public class ServerListEntry
 {
 	// Random generated UUID
-	public string serverUuid; 
+	public string uuid; 
 	// IP address. Beware: Might be IPv6 format, and require you to chop off the leading "::ffff:" part. YMMV.
 	public string ip;
 	// Port of the server.
@@ -208,11 +208,11 @@ Make sure you POST the correct data when you want to add/remove servers. See API
 1) POST - http://127.0.0.1:8889/add - x-WWW-FORM </br>
 <pre><code class="hljs language-shell">
     ip => ip addres of the node
-    serverKey => NodeListServerDefaultKey (specified in the Configuration file)
-    serverName => Lulu
-    serverPort => 7777 
-    serverPlayers => 2 (optional)
-    serverCapacity => 20 (optional)
+    key => NodeListServerDefaultKey (specified in the Configuration file)
+    name => Lulu
+    port => 7777 
+    players => 2 (optional)
+    capacity => 20 (optional)
 </code></pre>
 
 
@@ -222,7 +222,7 @@ Make sure you POST the correct data when you want to add/remove servers. See API
 
 2) POST - http://127.0.0.1:8889/list - x-WWW-FORM </br>
 <pre><code class="hljs language-shell">
-serverKey => NodeListServerDefaultKey (specified in the Configuration file)
+key => NodeListServerDefaultKey (specified in the Configuration file)
 </code></pre>
 
 * Now you have list of created servers as the following...*
@@ -256,8 +256,8 @@ serverKey => NodeListServerDefaultKey (specified in the Configuration file)
 
 3) POST - http://127.0.0.1:8889/remove - x-WWW-FORM </br>
 <pre><code class="hljs language-shell">
-	serverKey => NodeListServerDefaultKey (specified in the Configuration file)
-	serverUuid => de94592c-7672-419b-8fe2-234b48e46607 (the Generated uuid)
+	key => NodeListServerDefaultKey (specified in the Configuration file)
+	uuid => de94592c-7672-419b-8fe2-234b48e46607 (the Generated uuid)
 </code></pre>
 
 * Successfully Removed that server !!*
